@@ -1,0 +1,17 @@
+h1{
+    font-family: Georgia, serif;
+}
+
+.characters{
+font-family: Georgia, serif;
+}
+
+body{
+
+    margin:auto;
+    
+}
+
+li {
+    list-style-type: square;
+  }
