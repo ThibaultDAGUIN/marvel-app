@@ -1,11 +1,18 @@
 import './App.css'
+import characters from './data/characters.json'
 
 function App() {
   return (
     <>
       <h1>Marvel Characters</h1>
       <ul id="characters">
-        <li>
+        {characters.map((character) => (
+          <li key={character.id}>
+            {character.name}
+          </li>
+        ))}
+
+        {/* <li>
           Beast
         </li>
         <li>
@@ -13,7 +20,9 @@ function App() {
         </li>
         <li>
           Deadpool
-        </li>
+        </li> */}
+
+        
       </ul>
     </>
   )
