@@ -1,0 +1,57 @@
+[
+    {
+        "id": "1009175",
+        "name": "Beast",
+        "realName": "Henry 'Hank' McCoy",
+        "powers": ["Superhuman Strength", "Enhanced Agility", "Genius-level intellect"]
+    },
+    {
+        "id": "1009176",
+        "name": "Captain America",
+        "realName": "Steve Rogers",
+        "powers": ["Superhuman Strength", "Enhanced Agility", "Expert Combatant"]
+    },
+    {
+        "id": "1009177",
+        "name": "Deadpool",
+        "realName": "Wade Wilson",
+        "powers": ["Regeneration", "Expert Marksman", "Enhanced Agility"]
+    },
+    {
+        "id": "1009178",
+        "name": "Groot",
+        "realName": "Groot",
+        "powers": ["Plant Manipulation", "Regeneration", "Size Alteration"]
+    },
+    {
+        "id": "1009179",
+        "name": "Hulk",
+        "realName": "Bruce Banner",
+        "powers": ["Superhuman Strength", "Regeneration", "Gamma Radiation"]
+    },
+
+    {
+        "id": "1009180",
+        "name": "Spider-Man",
+        "realName": "Peter Parker",
+        "powers": ["Wall-Crawling", "Superhuman Strength", "Spider-Sense"]
+    },
+    {
+        "id": "1009181",
+        "name": "Iron Man",
+        "realName": "Tony Stark",
+        "powers": ["Genius-level intellect", "Powered Armor Suit", "Flight"]
+    },
+    {
+        "id": "1009182",
+        "name": "Thor",
+        "realName": "Thor Odinson",
+        "powers": ["Superhuman Strength", "Control over Thunder", "Immortality"]
+    },
+    {
+        "id": "1009184",
+        "name": "Black Widow",
+        "realName": "Natasha Romanoff",
+        "powers": ["Expert Martial Artist", "Enhanced Agility", "Espionage"]
+    }
+]
