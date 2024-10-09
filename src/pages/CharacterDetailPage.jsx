@@ -1,17 +1,19 @@
 // CharacterDetailPage.js
 import React from 'react';
-import { useRouteLoaderData } from 'react-router-dom';
 import CharacterDetail from '../components/CharacterDetail';
+import { useLoaderData } from 'react-router';
+
 
 
 const CharacterDetailPage = () => {
-   const character=useRouteLoaderData();
+   const character=useLoaderData();
 
    console.log(character);
 
     return (
         <div>
-            <CharacterDetail character={character} />
+            {/* <CharacterDetail character={character} /> */}
+            {character ? <CharacterDetail character={character} /> : 'loading...'}
         </div>
     );
 };

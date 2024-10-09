@@ -1,5 +1,5 @@
 
-import { getCharacters } from "./api/characters-api";
+import { getCharacters,getCharactersById } from "./api/characters-api";
 import CharacterDetailPage from "./pages/CharacterDetailPage";
 import Layout from "./components/Layout";
 import About from "./pages/AboutPage";
@@ -20,7 +20,7 @@ const routes = [
             {
                 path: "/characters/:id",
                 element: <CharacterDetailPage />,
-                loader: ({ params }) => getCharacters(params.id),
+                loader: ({ params }) => getCharactersById(params.id),
             },
             {
                 path: "/about",
