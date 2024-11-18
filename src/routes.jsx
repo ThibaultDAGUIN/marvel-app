@@ -17,8 +17,8 @@ const routes = [
                 // loader: () => getCharacters(),
                 loader: ({ request }) => {
                     const url = new URL(request.url);
-                    const sort = url.searchParams.get('sort') //|| 'name';
-                    const order = url.searchParams.get('order') //|| 'asc';
+                    const sort = url.searchParams.get('sort') || 'name';
+                    const order = url.searchParams.get('order') || 'asc';
                     console.log('sort', sort);
                     console.log('order', order);
                     return getCharacters(sort, order);
