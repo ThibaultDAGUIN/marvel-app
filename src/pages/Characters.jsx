@@ -4,22 +4,27 @@ import { CharactersList } from "../components/CharactersList";
 import { NumberOfCharacters } from "../components/NumberOfCharacters";
 import { useLoaderData, useNavigate } from 'react-router';
 import { getCharacters } from '../api/characters-api';
+import { useSearchParams } from 'react-router-dom';
 
 const Characters = () => {
     document.title = "Marvel App";
 
     const initialCharacters = useLoaderData();
+
+
+    let [searchparams, setSearchparams] = useSearchParams();
+
     const [characters, setCharacters] = useState(initialCharacters);
-    const [sort, setSort] = useState('name');
-    const [order, setOrder] = useState('asc');
-    const navigate = useNavigate();
+    const [sort, setSort] = useState(searchparams.get('sort') || 'name');
+    const [order, setOrder] = useState(searchparams.get('order') || 'asc');
+    // const navigate = useNavigate();
 
 
     useEffect(() => {
         const sortedCharacters = getCharacters({ sort, order });
         setCharacters(sortedCharacters);
-        navigate(`./?sort=${sort}&order=${order}`);
-    }, [sort, order, navigate]);
+        //navigate(`./?sort=${sort}&order=${order}`);
+    }, [sort, order]);
 
     return (
         <>

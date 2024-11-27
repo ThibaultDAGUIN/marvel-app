@@ -10,11 +10,13 @@ const CharacterDetailPage = () => {
     const character = useLoaderData();
 
     useEffect(() => {
-        document.title = `${character.name} | Marvel App`;
+        if (character)
+            document.title = `${character.name} | Marvel App`;
     }, [character]);
 
     return (
         <>
+            
             <CharacterDetail character={character} />
 
             <h2>Capacities</h2>
