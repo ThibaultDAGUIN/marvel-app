@@ -1,6 +1,6 @@
 export default function Contact () {
 
-    document.title = 'About Us | Marvel\'s Characters';
+    document.title = 'Contact | Marvel\'s Characters';
 
        return (
         <>

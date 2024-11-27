@@ -11,7 +11,7 @@ describe('Contact component', () => {
 
     test('sets the document title correctly', () => {
         render(<Contact />);
-        expect(document.title).toBe("About Us | Marvel's Characters");
+        expect(document.title).toBe("Contact | Marvel's Characters");
     });
 
     test('renders the "Contact Us" heading', () => {
