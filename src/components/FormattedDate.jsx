@@ -4,7 +4,7 @@ import { fr } from 'date-fns/locale';
 
 
 const FormattedDate = ({ date }) => {
-    const formattedDate = date ? format(new Date(date), 'dd MMMM yyyy') : 'Date non disponible';
+    const formattedDate = date ? format(new Date(date), 'MMM dd, yyyy') : 'Date non disponible';
     return <span>{formattedDate}</span>;
 };
 
