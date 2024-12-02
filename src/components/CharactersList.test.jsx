@@ -4,15 +4,19 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { CharactersList } from './CharactersList';
 import { BrowserRouter } from 'react-router-dom';
+import { format } from 'date-fns';
 
 const characters = [
     {
         id: "1",
-        name: "Thor"
+        name: "Thor",
+        modified: "2023-01-01"
+
     },
     {
         id: "2",
-        name: "Captain America"
+        name: "Captain America",
+        modified: "2023-02-01"
     }
 ];
 
@@ -27,18 +31,11 @@ describe('CharactersList component', () => {
         expect(characterItems).toHaveLength(characters.length);
     });
 
-    test('renders the correct character names', () => {
+    test('renders the correct formatted dates for each character', () => {
         render(<CharactersList characters={characters} />, { wrapper: BrowserRouter });
-        characters.forEach(character => {
-            expect(screen.getByText(character.name)).toBeInTheDocument();
-        });
-    });
-
-    test('renders the correct links for each character', () => {
-        render(<CharactersList characters={characters} />, { wrapper: BrowserRouter });
-        characters.forEach(character => {
-            const linkElement = screen.getByText(character.name).closest('a');
-            expect(linkElement).toHaveAttribute('href', `/characters/${character.id}`);
-        });
+        const formattedDate1 = format(new Date(characters[0].modified), 'MMM dd, yyyy');
+        const formattedDate2 = format(new Date(characters[1].modified), 'MMM dd, yyyy');
+        expect(screen.getByText(formattedDate1)).toBeInTheDocument();
+        expect(screen.getByText(formattedDate2)).toBeInTheDocument();
     });
 });

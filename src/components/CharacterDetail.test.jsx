@@ -3,6 +3,7 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import CharacterDetail from './CharacterDetail';
+import { format } from 'date-fns';
 
 const character = {
     name: "Thor",
@@ -34,7 +35,8 @@ describe('CharacterDetail component', () => {
 
     test('renders character modified date', () => {
         render(<CharacterDetail character={character} />);
-        expect(screen.getByText(`Date de modification : ${character.modified}`)).toBeInTheDocument();
+        const formattedDate = format(new Date(character.modified), 'MMM dd, yyyy');
+        expect(screen.getByText(`${formattedDate}`)).toBeInTheDocument();
     });
 
     test('renders correctly with empty character object', () => {
