@@ -19,7 +19,7 @@ export function CharactersList({characters= []}) {
           {characters.map((character) => (
             <li key={character.id}>
               <Link to={`/characters/${character.id}`} style={{ textDecoration: 'none', color: '#333' }}>
-                    <strong>{character.name}</strong> - <FormattedDate date={character.modified} />
+                    <strong>{character.name}</strong> - <small><FormattedDate date={character.modified} /></small>
               </Link>
             </li>
           ))}
