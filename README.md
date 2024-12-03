@@ -67,7 +67,7 @@ Les contributions sont les bienvenues ! Veuillez suivre les étapes ci-dessous p
 5. Ouvrez une Pull Request vers la branche develop.
 
 ## Licence
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+Ce projet est sous licence MIT.
 
 ## Auteurs
 - **Thibault DAGUIN** - *Développeur principal* - [Mon Profil GitHub](https://github.com/ThibaultDAGUIN/)
