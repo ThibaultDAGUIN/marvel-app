@@ -17,6 +17,7 @@ test('renders Layout component correctly', () => {
 
     // Check for navigation links
     expect(screen.getByText('Home')).toBeInTheDocument();
+    expect(screen.getByText('Compare')).toBeInTheDocument();
     expect(screen.getByText('About')).toBeInTheDocument();
     expect(screen.getByText('Contact')).toBeInTheDocument();
 
