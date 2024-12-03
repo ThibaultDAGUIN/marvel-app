@@ -1,5 +1,6 @@
 import characters from '../data/characters.json';
 
+
 // fonction getCharacters
 
 // export function getCharacters(sortField = 'name', sortOrder = 'asc') {
